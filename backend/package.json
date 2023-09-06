@@ -1,0 +1,53 @@
+{
+  "name": "bintusstores-app",
+  "version": "1.0.0",
+  "description": "Bintus Stores retail clothing app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bintus-ux/bintus-stores-repo.git"
+  },
+  "author": "Bintus eze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bintus-ux/bintus-stores-repo/issues"
+  },
+  "homepage": "https://github.com/bintus-ux/bintus-stores-repo#readme",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "concurrently": "^8.2.0",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "nodemon": "^3.0.1",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.1"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.1.2",
+    "@stripe/stripe-js": "^2.1.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.2",
+    "react-scripts": "^5.0.1",
+    "stripe": "^13.3.0",
+    "util": "^0.12.5"
+  }
+}
