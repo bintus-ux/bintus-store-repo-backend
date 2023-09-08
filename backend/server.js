@@ -6,6 +6,7 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import productRouter from './routes/productRoute.js'
+import cors from 'cors'
 // import Stripe from 'stripe';(process.env.STRIPE_PRIVATE_KEY)
 
 dotenv.config()
@@ -15,6 +16,12 @@ connectDB()
 const app = express()
 
 app.use(express.json())
+
+app.use(
+  cors({
+    origin: '*',
+  })
+)
 
 app.get('/', (req, res) => {
   res.send('API is running....')
